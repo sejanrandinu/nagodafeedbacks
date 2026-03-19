@@ -16,6 +16,7 @@ const translations = {
         purposeDS: "ප්‍රාදේශීය ලේකම් හමුවීමට",
         purposeADS: "සහකාර ප්‍රාදේශීය ලේකම් හමුවීමට",
         purposeEst: "ආයතන අංශය",
+        purposeLand: "ඉඩම් අංශය",
         purposeNIC: "හැඳුනුම්පත් අංශය",
         purposeReg: "රෙජිස්ට්‍රාර් අංශය",
         purposeMotor: "මෝටර් රථ අංශය",
@@ -52,6 +53,7 @@ const translations = {
         purposeDS: "பிரதேச செயலாளரைச் சந்திக்க",
         purposeADS: "உதவி பிரதேச செயலாளரைச் சந்திக்க",
         purposeEst: "தாபனப் பிரிவு",
+        purposeLand: "காணிப் பிரிவு",
         purposeNIC: "அடையாள அட்டைப் பிரிவு",
         purposeReg: "பதிவாளர் பிரிவு",
         purposeMotor: "மோட்டார் போக்குவரத்துப் பிரிவு",
@@ -88,6 +90,7 @@ const translations = {
         purposeDS: "To meet Divisional Secretary",
         purposeADS: "To meet Asst. Divisional Secretary",
         purposeEst: "Establishment Branch",
+        purposeLand: "Land Branch",
         purposeNIC: "NIC Branch",
         purposeReg: "Registrar Branch",
         purposeMotor: "Motor Traffic Branch",
@@ -172,6 +175,7 @@ function updateLanguage() {
     document.getElementById('purposeOptionDS').textContent = t.purposeDS;
     document.getElementById('purposeOptionADS').textContent = t.purposeADS;
     document.getElementById('purposeOptionEst').textContent = t.purposeEst;
+    document.getElementById('purposeOptionLand').textContent = t.purposeLand;
     document.getElementById('purposeOptionNIC').textContent = t.purposeNIC;
     document.getElementById('purposeOptionReg').textContent = t.purposeReg;
     document.getElementById('purposeOptionMotor').textContent = t.purposeMotor;
