@@ -3,7 +3,7 @@ const API_URL = "https://nagoda-review-api.nagodadb.workers.dev/api/reviews"; //
 const translations = {
     si: {
         deptTitle: "නාගොඩ ප්‍රාදේශීය ලේකම් කාර්යාලය",
-        title: "පැමිණිලි සහ ප්‍රතිචාර",
+        title: "අපි ගැන අපිට කියන්න",
         nameLabel: "නම (කැමති නම් පමණක්)",
         namePlaceholder: "ඔබේ නම ඇතුළත් කරන්න",
         phoneLabel: "දුරකථන අංකය (කැමති නම් පමණක්)",
@@ -35,11 +35,11 @@ const translations = {
         submitBtn: "යොමු කරන්න",
         thankYouText: "ඔබේ ප්‍රතිචාරයට ස්තුතියි!",
         newReviewBtn: "තවත් ප්‍රතිචාරයක්",
-        docTitle: "පැමිණිලි සහ ප්‍රතිචාර"
+        docTitle: "අපි ගැන අපිට කියන්න"
     },
     ta: {
         deptTitle: "நாகொட பிரதேச செயலகம்",
-        title: "புகார்கள் மற்றும் விமர்சனங்கள்",
+        title: "எங்களைப் பற்றி எங்களிடம் கூறுங்கள்",
         nameLabel: "பெயர் (விருப்பமிருந்தால் மட்டும்)",
         namePlaceholder: "உங்கள் பெயரை உள்ளிடவும்",
         phoneLabel: "தொலைபேசி எண் (விருப்பமிருந்தால் மட்டும்)",
@@ -71,11 +71,11 @@ const translations = {
         submitBtn: "சமர்ப்பிக்க",
         thankYouText: "உங்கள் கருத்துக்கு நன்றி!",
         newReviewBtn: "மீண்டும்",
-        docTitle: "புகார்கள் மற்றும் விமர்சனங்கள்"
+        docTitle: "எங்களைப் பற்றி எங்களிடம் கூறுங்கள்"
     },
     en: {
         deptTitle: "Nagoda Divisional Secretariat",
-        title: "Complaints & Reviews",
+        title: "Tell Us About Us",
         nameLabel: "Name (Optional)",
         namePlaceholder: "Enter your name",
         phoneLabel: "Phone Number (Optional)",
@@ -107,7 +107,7 @@ const translations = {
         submitBtn: "Submit",
         thankYouText: "Thank you for your feedback!",
         newReviewBtn: "Submit Another",
-        docTitle: "Complaints & Reviews"
+        docTitle: "Tell Us About Us"
     }
 };
 
