@@ -5,7 +5,7 @@ export default {
             return new Response(null, {
                 headers: {
                     "Access-Control-Allow-Origin": "*",
-                    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+                    "Access-Control-Allow-Methods": "GET, POST, DELETE, OPTIONS",
                     "Access-Control-Allow-Headers": "Content-Type",
                 },
             });
@@ -67,6 +67,36 @@ export default {
                     status: 200,
                     headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }
                 });
+            } catch (err) {
+                return new Response(JSON.stringify({ success: false, error: err.message }), {
+                    status: 500,
+                    headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }
+                });
+            }
+        }
+
+        // DELETE API: Delete a review by ID or Clear All
+        if (request.method === "DELETE" && url.pathname === "/api/reviews") {
+            try {
+                const clear = url.searchParams.get("clear");
+                const id = url.searchParams.get("id");
+
+                if (clear === "true") {
+                    await env.DB.prepare("DELETE FROM reviews").run();
+                } else if (id) {
+                    await env.DB.prepare("DELETE FROM reviews WHERE id = ?").bind(id).run();
+                } else {
+                    return new Response(JSON.stringify({ success: false, error: "Missing parameter" }), {
+                        status: 400,
+                        headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }
+                    });
+                }
+
+                return new Response(JSON.stringify({ success: true }), {
+                    status: 200,
+                    headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }
+                });
+
             } catch (err) {
                 return new Response(JSON.stringify({ success: false, error: err.message }), {
                     status: 500,
