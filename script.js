@@ -3,7 +3,7 @@ const API_URL = "https://nagoda-review-api.nagodadb.workers.dev/api/reviews"; //
 const translations = {
     si: {
         deptTitle: "නාගොඩ ප්‍රාදේශීය ලේකම් කාර්යාලය",
-        title: "අපි ගැන අපිට කියන්න",
+        title: "අපි ගැන අපට කියන්න",
         nameLabel: "නම (කැමති නම් පමණක්)",
         namePlaceholder: "ඔබේ නම ඇතුළත් කරන්න",
         phoneLabel: "දුරකථන අංකය (කැමති නම් පමණක්)",
