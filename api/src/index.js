@@ -26,10 +26,15 @@ export default {
                     });
                 }
 
+                // Calculate Sri Lanka Time (UTC+5:30)
+                const now = new Date();
+                const slTime = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
+                const formattedTime = slTime.toISOString().replace('T', ' ').substring(0, 19);
+
                 // Insert into D1 Database
                 const { success } = await env.DB.prepare(
-                    `INSERT INTO reviews (lang, rating, name, phone, address, purpose, message) 
-                     VALUES (?, ?, ?, ?, ?, ?, ?)`
+                    `INSERT INTO reviews (lang, rating, name, phone, address, purpose, message, created_at) 
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
                 ).bind(
                     data.lang || "si",
                     data.rating,
@@ -37,7 +42,8 @@ export default {
                     data.phone || "-",
                     data.address || "-",
                     data.purpose,
-                    data.message || "-"
+                    data.message || "-",
+                    formattedTime
                 ).run();
 
                 return new Response(JSON.stringify({ success }), {

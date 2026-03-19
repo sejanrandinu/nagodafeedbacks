@@ -10,22 +10,22 @@ const translations = {
         phonePlaceholder: "ඔබේ දුරකථන අංකය ඇතුළත් කරන්න",
         addressLabel: "ලිපිනය (කැමති නම් පමණක්)",
         addressPlaceholder: "ඔබේ ලිපිනය ඇතුළත් කරන්න",
-        purposeLabel: "පැමිණි කාර්යය *",
-        purposePlaceholder: "ඔබ පැමිණි කාර්යය ඇතුළත් කරන්න",
+        purposeLabel: "පැමිණි අංශය *",
+        purposePlaceholder: "ඔබ පැමිණි අංශය ඇතුළත් කරන්න",
         purposeDefault: "-- කරුණාකර තෝරන්න --",
-        purposeRegistry: "රෙජිස්ට්‍රාර් අංශයේ කටයුතු",
-        purposeNIC: "හැඳුනුම්පත් අංශයේ කටයුතු",
-        purposeTimberFelling: "දැව හෙළීම් කටයුතු",
-        purposeTimberTransport: "දැව ප්‍රවාහන කටයුතු",
-        purposeAnimalTransport: "සතුන් ප්‍රවාහන කටයුතු",
-        purposeBusinessReg: "ව්‍යාපාර ලියාපදිංචි කටයුතු",
-        purposeSoilSandStone: "පස්, වැලි, කළුගල් සම්බන්ධ කටයුතු",
-        purposeExciseDuty: "සුරාබදු සම්බන්ධ කටයුතු",
-        purposeVehicleFines: "වාහන දඩ ගෙවීම පිළිබඳ කටයුතු",
-        purposeTouristBungalow: "සංචාරක බංගලා වෙන් කිරීම",
-        purposeInformationAct: "තොරතුරු පනත සම්බන්ධ කටයුතු",
-        purposeIncomeCertificate: "ආදායම් සහතික නිකුත් කිරීම",
-        purposeMahapola: "මහපොළ ශිෂ්‍යත්ව සම්බන්ධ කටයුතු",
+        purposeDS: "ප්‍රාදේශීය ලේකම් හමුවීමට",
+        purposeADS: "සහකාර ප්‍රාදේශීය ලේකම් හමුවීමට",
+        purposeEst: "ආයතන අංශය",
+        purposeNIC: "හැඳුනුම්පත් අංශය",
+        purposeReg: "රෙජිස්ට්‍රාර් අංශය",
+        purposeMotor: "මෝටර් රථ අංශය",
+        purposeShroff: "සරප් අංශය",
+        purposeAccounts: "ගිණුම් අංශය",
+        purposeDev: "සංවර්ධන අංශය",
+        purposeSocial: "සමාජ සේවා අංශය",
+        purposeSamurdhi: "සමෘද්ධි අංශය",
+        purposeVidatha: "විදාතා සම්පත් මධ්‍යස්ථානය",
+        purposeGN: "ග්‍රාම නිලධාරී අංශය",
         purposeOther: "වෙනත්",
         messageLabel: "පණිවිඩය (කැමති නම් පමණක්)",
         messagePlaceholder: "ඔබේ අදහස මෙහි ලියන්න...",
@@ -49,19 +49,19 @@ const translations = {
         purposeLabel: "வருகைக்கான காரணம் *",
         purposePlaceholder: "நீங்கள் வந்த காரணத்தை உள்ளிடவும்",
         purposeDefault: "-- தயவுசெய்து தேர்ந்தெடுக்கவும் --",
-        purposeRegistry: "பதிவாளர் பிரிவு விவகாரங்கள்",
-        purposeNIC: "அடையாள அட்டை பிரிவு விவகாரங்கள்",
-        purposeTimberFelling: "மரம் வெட்டுதல் விவகாரங்கள்",
-        purposeTimberTransport: "மரப் போக்குவரத்து விவகாரங்கள்",
-        purposeAnimalTransport: "மிருக போக்குவரத்து விவகாரங்கள்",
-        purposeBusinessReg: "வணிக பதிவு விவகாரங்கள்",
-        purposeSoilSandStone: "மண், மணல் மற்றும் கல் தொடர்பான விவகாரங்கள்",
-        purposeExciseDuty: "மதுவரி தொடர்பான விவகாரங்கள்",
-        purposeVehicleFines: "வாகன அபராதம் செலுத்துதல் தொடர்பான விவகாரங்கள்",
-        purposeTouristBungalow: "சுற்றுலா பங்களா முன்பதிவு",
-        purposeInformationAct: "தகவல் சட்டம் தொடர்பான விவகாரங்கள்",
-        purposeIncomeCertificate: "வருமான சான்றிதழ் வழங்குதல்",
-        purposeMahapola: "மகாபொல புலமைப்பரிசில் தொடர்பான விவகாரங்கள்",
+        purposeDS: "பிரதேச செயலாளரைச் சந்திக்க",
+        purposeADS: "உதவி பிரதேச செயலாளரைச் சந்திக்க",
+        purposeEst: "தாபனப் பிரிவு",
+        purposeNIC: "அடையாள அட்டைப் பிரிவு",
+        purposeReg: "பதிவாளர் பிரிவு",
+        purposeMotor: "மோட்டார் போக்குவரத்துப் பிரிவு",
+        purposeShroff: "காசாளர் பிரிவு",
+        purposeAccounts: "கணக்குப் பிரிவு",
+        purposeDev: "அபிவிருத்திப் பிரிவு",
+        purposeSocial: "சமூக சேவைகள் பிரிவு",
+        purposeSamurdhi: "சமுர்த்திப் பிரிவு",
+        purposeVidatha: "விதாத்தா வள நிலையம்",
+        purposeGN: "கிராம உத்தியோகத்தர் பிரிவு",
         purposeOther: "மற்றவை",
         messageLabel: "செய்தி (விருப்பமிருந்தால் மட்டும்)",
         messagePlaceholder: "உங்கள் கருத்தை இங்கே எழுதவும்...",
@@ -85,19 +85,19 @@ const translations = {
         purposeLabel: "Purpose of Visit *",
         purposePlaceholder: "Enter your purpose here",
         purposeDefault: "-- Please select --",
-        purposeRegistry: "Registry section matters",
-        purposeNIC: "NIC / Identity card section matters",
-        purposeTimberFelling: "Timber felling matters",
-        purposeTimberTransport: "Timber transport matters",
-        purposeAnimalTransport: "Animal transport matters",
-        purposeBusinessReg: "Business registration matters",
-        purposeSoilSandStone: "Soil, sand, and stone related matters",
-        purposeExciseDuty: "Excise duty related matters",
-        purposeVehicleFines: "Vehicle fines payment related matters",
-        purposeTouristBungalow: "Tourist bungalow reservation",
-        purposeInformationAct: "Information act related matters",
-        purposeIncomeCertificate: "Issuing income certificates",
-        purposeMahapola: "Mahapola scholarship related matters",
+        purposeDS: "To meet Divisional Secretary",
+        purposeADS: "To meet Asst. Divisional Secretary",
+        purposeEst: "Establishment Branch",
+        purposeNIC: "NIC Branch",
+        purposeReg: "Registrar Branch",
+        purposeMotor: "Motor Traffic Branch",
+        purposeShroff: "Shroff Branch",
+        purposeAccounts: "Accounts Branch",
+        purposeDev: "Development Branch",
+        purposeSocial: "Social Services Branch",
+        purposeSamurdhi: "Samurdhi Branch",
+        purposeVidatha: "Vidatha Resource Centre",
+        purposeGN: "Grama Niladhari Branch",
         purposeOther: "Other",
         messageLabel: "Message (Optional)",
         messagePlaceholder: "Write your feedback here...",
@@ -169,19 +169,19 @@ function updateLanguage() {
     document.getElementById('userPurposeOther').placeholder = t.purposePlaceholder;
 
     document.getElementById('purposeOptionDefault').textContent = t.purposeDefault;
-    document.getElementById('purposeOptionRegistry').textContent = t.purposeRegistry;
+    document.getElementById('purposeOptionDS').textContent = t.purposeDS;
+    document.getElementById('purposeOptionADS').textContent = t.purposeADS;
+    document.getElementById('purposeOptionEst').textContent = t.purposeEst;
     document.getElementById('purposeOptionNIC').textContent = t.purposeNIC;
-    document.getElementById('purposeOptionTimberFelling').textContent = t.purposeTimberFelling;
-    document.getElementById('purposeOptionTimberTransport').textContent = t.purposeTimberTransport;
-    document.getElementById('purposeOptionAnimalTransport').textContent = t.purposeAnimalTransport;
-    document.getElementById('purposeOptionBusinessReg').textContent = t.purposeBusinessReg;
-    document.getElementById('purposeOptionSoilSandStone').textContent = t.purposeSoilSandStone;
-    document.getElementById('purposeOptionExciseDuty').textContent = t.purposeExciseDuty;
-    document.getElementById('purposeOptionVehicleFines').textContent = t.purposeVehicleFines;
-    document.getElementById('purposeOptionTouristBungalow').textContent = t.purposeTouristBungalow;
-    document.getElementById('purposeOptionInformationAct').textContent = t.purposeInformationAct;
-    document.getElementById('purposeOptionIncomeCertificate').textContent = t.purposeIncomeCertificate;
-    document.getElementById('purposeOptionMahapola').textContent = t.purposeMahapola;
+    document.getElementById('purposeOptionReg').textContent = t.purposeReg;
+    document.getElementById('purposeOptionMotor').textContent = t.purposeMotor;
+    document.getElementById('purposeOptionShroff').textContent = t.purposeShroff;
+    document.getElementById('purposeOptionAccounts').textContent = t.purposeAccounts;
+    document.getElementById('purposeOptionDev').textContent = t.purposeDev;
+    document.getElementById('purposeOptionSocial').textContent = t.purposeSocial;
+    document.getElementById('purposeOptionSamurdhi').textContent = t.purposeSamurdhi;
+    document.getElementById('purposeOptionVidatha').textContent = t.purposeVidatha;
+    document.getElementById('purposeOptionGN').textContent = t.purposeGN;
     document.getElementById('purposeOptionOther').textContent = t.purposeOther;
 
     messageLabel.textContent = t.messageLabel;
@@ -228,7 +228,7 @@ reviewForm.addEventListener('submit', (e) => {
         if (userPurposeSelectElem.value === 'other') {
             purposeValue = userPurposeOtherElem.value.trim();
             if (!purposeValue) {
-                alert(currentLang === 'si' ? "කරුණාකර ඔබ පැමිණි කාර්යය ඇතුළත් කරන්න." : (currentLang === 'ta' ? "தயவுசெய்து உங்கள் வருகைக்கான காரணத்தை உள்ளிடவும்." : "Please enter your purpose of visit."));
+                alert(currentLang === 'si' ? "කරුණාකර ඔබ පැමිණි අංශය ඇතුළත් කරන්න." : (currentLang === 'ta' ? "தயவுசெய்து உங்கள் வருகைக்கான காரணத்தை உள்ளிடவும்." : "Please enter your purpose of visit."));
                 userPurposeOtherElem.focus();
                 return;
             }
@@ -236,7 +236,7 @@ reviewForm.addEventListener('submit', (e) => {
             purposeValue = userPurposeSelectElem.options[userPurposeSelectElem.selectedIndex].text;
         }
     } else {
-        alert(currentLang === 'si' ? "කරුණාකර පැමිණි කාර්යය තෝරන්න." : (currentLang === 'ta' ? "தயவுசெய்து வருகைக்கான காரணத்தைத் தேர்ந்தெடுக்கவும்." : "Please select a purpose of visit."));
+        alert(currentLang === 'si' ? "කරුණාකර පැමිණි අංශය තෝරන්න." : (currentLang === 'ta' ? "தயவுசெய்து வருகைக்கான காரணத்தைத் தேர்ந்தெடுக்கவும்." : "Please select a purpose of visit."));
         userPurposeSelectElem.focus();
         return;
     }
