@@ -1,0 +1,8 @@
+name = "nagoda-review-api"
+main = "src/index.js"
+compatibility_date = "2024-03-20"
+
+[[d1_databases]]
+binding = "DB" # Available in your Worker on env.DB
+database_name = "nagoda-reviews"
+database_id = "5b21c8db-699e-4096-a8cf-022af87a1462" # Put the ID you get from 'wrangler d1 create'
