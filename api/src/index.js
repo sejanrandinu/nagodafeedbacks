@@ -33,8 +33,8 @@ export default {
 
                 // Insert into D1 Database
                 const { success } = await env.DB.prepare(
-                    `INSERT INTO reviews (lang, rating, name, phone, address, purpose, message, created_at) 
-                     VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
+                    `INSERT INTO reviews (lang, rating, name, phone, address, purpose, task, message, created_at) 
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
                 ).bind(
                     data.lang || "si",
                     data.rating,
@@ -42,6 +42,7 @@ export default {
                     data.phone || "-",
                     data.address || "-",
                     data.purpose,
+                    data.task || "-",
                     data.message || "-",
                     formattedTime
                 ).run();

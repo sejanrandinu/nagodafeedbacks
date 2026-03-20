@@ -7,6 +7,7 @@ CREATE TABLE reviews (
   phone TEXT,
   address TEXT,
   purpose TEXT NOT NULL,
+  task TEXT,
   message TEXT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

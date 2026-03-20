@@ -12,6 +12,8 @@ const translations = {
         addressPlaceholder: "ඔබේ ලිපිනය ඇතුළත් කරන්න",
         purposeLabel: "පැමිණි අංශය *",
         purposePlaceholder: "ඔබ පැමිණි අංශය ඇතුළත් කරන්න",
+        taskLabel: "පැමිණි කාර්යය (කැමති නම් පමණක්)",
+        taskPlaceholder: "ඔබ පැමිණි කාර්යය මෙහි ලියන්න...",
         purposeDefault: "-- කරුණාකර තෝරන්න --",
         purposeDS: "ප්‍රාදේශීය ලේකම් හමුවීමට",
         purposeADS: "සහකාර ප්‍රාදේශීය ලේකම් හමුවීමට",
@@ -47,8 +49,10 @@ const translations = {
         phonePlaceholder: "உங்கள் தொலைபேசி எண்ணை உள்ளிடவும்",
         addressLabel: "முகவரி (விருப்பமிருந்தால் மட்டும்)",
         addressPlaceholder: "உங்கள் முகவரியை உள்ளிடவும்",
-        purposeLabel: "வருகைக்கான காரணம் *",
-        purposePlaceholder: "நீங்கள் வந்த காரணத்தை உள்ளிடவும்",
+        purposeLabel: "துறை (பிரிவு) *",
+        purposePlaceholder: "நீங்கள் வந்த துறையை உள்ளிடவும்",
+        taskLabel: "வருகைக்கான நோக்கம் (விருப்பமிருந்தால் மட்டும்)",
+        taskPlaceholder: "உங்கள் வருகையின் நோக்கத்தை இங்கே எழுதுங்கள்...",
         purposeDefault: "-- தயவுசெய்து தேர்ந்தெடுக்கவும் --",
         purposeDS: "பிரதேச செயலாளரைச் சந்திக்க",
         purposeADS: "உதவி பிரதேச செயலாளரைச் சந்திக்க",
@@ -84,8 +88,10 @@ const translations = {
         phonePlaceholder: "Enter your phone number",
         addressLabel: "Address (Optional)",
         addressPlaceholder: "Enter your address",
-        purposeLabel: "Purpose of Visit *",
-        purposePlaceholder: "Enter your purpose here",
+        purposeLabel: "Department *",
+        purposePlaceholder: "Please specify the department",
+        taskLabel: "Purpose of Visit (Optional)",
+        taskPlaceholder: "What was the purpose of your visit?",
         purposeDefault: "-- Please select --",
         purposeDS: "To meet Divisional Secretary",
         purposeADS: "To meet Asst. Divisional Secretary",
@@ -125,6 +131,8 @@ const phoneLabel = document.getElementById('phoneLabel');
 const userPhoneInput = document.getElementById('userPhone');
 const addressLabel = document.getElementById('addressLabel');
 const userAddressInput = document.getElementById('userAddress');
+const taskLabel = document.getElementById('taskLabel');
+const userTaskInput = document.getElementById('userTask');
 const messageLabel = document.getElementById('messageLabel');
 const userMessageInput = document.getElementById('userMessage');
 const ratingBadText = document.getElementById('ratingBadText');
@@ -187,6 +195,9 @@ function updateLanguage() {
     document.getElementById('purposeOptionVidatha').textContent = t.purposeVidatha;
     document.getElementById('purposeOptionGN').textContent = t.purposeGN;
     document.getElementById('purposeOptionOther').textContent = t.purposeOther;
+
+    taskLabel.textContent = t.taskLabel;
+    userTaskInput.placeholder = t.taskPlaceholder;
 
     messageLabel.textContent = t.messageLabel;
     userMessageInput.placeholder = t.messagePlaceholder;
@@ -252,6 +263,7 @@ reviewForm.addEventListener('submit', (e) => {
         phone: userPhoneInput.value || "-",
         address: document.getElementById('userAddress').value || "-",
         purpose: purposeValue,
+        task: userTaskInput.value.trim() || "-",
         message: userMessageInput.value || "-"
     };
 
