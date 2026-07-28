@@ -8,10 +8,9 @@
     <meta name="description" content="Submit your feedback and complaints easily.">
     <link rel="stylesheet" href="style.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Sinhala:wght@400;500;600&family=Noto+Sans+Tamil:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Sinhala:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600&display=swap"
         rel="stylesheet">
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/4b/Emblem_of_Sri_Lanka.svg"
-        type="image/svg+xml">
+    <link rel="icon" href="logo.jfif" type="image/jpeg">
 </head>
 
 <body>
@@ -19,15 +18,28 @@
     <div class="background-shape shape-2"></div>
     <div class="background-shape shape-3"></div>
 
+    <!-- Top Right Corner Settings Icon to Admin -->
+    <a href="../nagodafeedbacksadmin/index.html" class="top-settings-btn" title="Admin Portal / පාලන පුවරුව">
+        <span class="gear-icon">⚙️</span>
+    </a>
+
     <div class="container">
         <header class="header">
-            <div class="lang-switcher">
-                <button class="lang-btn active" data-lang="si">සිංහල</button>
-                <button class="lang-btn" data-lang="ta">தமிழ்</button>
-                <button class="lang-btn" data-lang="en">English</button>
+            <div class="top-nav">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="si">සිංහල</button>
+                    <button class="lang-btn" data-lang="ta">தமிழ்</button>
+                    <button class="lang-btn" data-lang="en">English</button>
+                </div>
             </div>
+            
+            <div class="logo-wrapper">
+                <img src="logo.jfif" alt="නාගොඩ ප්‍රාදේශීය ලේකම් කාර්යාලය" class="emblem-img">
+            </div>
+
             <h2 id="deptTitleText" class="dept-title">නාගොඩ ප්‍රාදේශීය ලේකම් කාර්යාලය</h2>
             <h1 id="titleText">අපි ගැන අපිට කියන්න</h1>
+            <p class="last-update" id="lastUpdate">අවසන් යාවත්කාලීන කිරීම: -</p>
         </header>
 
         <form id="reviewForm" class="review-form">
@@ -37,7 +49,7 @@
                     <label class="rating-option" for="rating-very-happy">
                         <input type="radio" name="rating" id="rating-very-happy" value="very-happy" required>
                         <div class="emoji-container">
-                            <span class="emoji">🤩</span>
+                            <span class="emoji">😀</span>
                         </div>
                         <span class="rating-label" id="ratingVeryHappyText">ඉතා හොඳයි</span>
                     </label>
@@ -76,7 +88,7 @@
             </div>
 
             <div class="form-group">
-                <label for="userPurposeSelect" id="purposeLabel">පැමිණි අංශය</label>
+                <label for="userPurposeSelect" id="purposeLabel">පැමිණි අංශය *</label>
                 <select id="userPurposeSelect" name="userPurposeSelect" required>
                     <option value="" id="purposeOptionDefault">-- කරුණාකර තෝරන්න --</option>
                     <option value="ds" id="purposeOptionDS">ප්‍රාදේශීය ලේකම් හමුවීමට</option>
@@ -112,7 +124,9 @@
                 <textarea id="userMessage" name="userMessage" rows="4" placeholder="ඔබේ අදහස මෙහි ලියන්න..."></textarea>
             </div>
 
-            <button type="submit" class="submit-btn" id="submitBtn">යොමු කරන්න</button>
+            <button type="submit" class="submit-btn" id="submitBtn">
+                <span>යොමු කරන්න</span>
+            </button>
         </form>
 
         <div id="successMessage" class="success-message hidden">

@@ -4,6 +4,7 @@ const translations = {
     si: {
         deptTitle: "නාගොඩ ප්‍රාදේශීය ලේකම් කාර්යාලය",
         title: "අපි ගැන අපට කියන්න",
+        adminBtn: "පාලන පුවරුව",
         nameLabel: "නම (කැමති නම් පමණක්)",
         namePlaceholder: "ඔබේ නම ඇතුළත් කරන්න",
         phoneLabel: "දුරකථන අංකය (කැමති නම් පමණක්)",
@@ -43,6 +44,7 @@ const translations = {
     ta: {
         deptTitle: "நாகொட பிரதேச செயலகம்",
         title: "எங்களைப் பற்றி எங்களிடம் கூறுங்கள்",
+        adminBtn: "நிர்வாகக் குழு",
         nameLabel: "பெயர் (விருப்பமிருந்தால் மட்டும்)",
         namePlaceholder: "உங்கள் பெயரை உள்ளிடவும்",
         phoneLabel: "தொலைபேசி எண் (விருப்பமிருந்தால் மட்டும்)",
@@ -82,6 +84,7 @@ const translations = {
     en: {
         deptTitle: "Nagoda Divisional Secretariat",
         title: "Tell Us About Us",
+        adminBtn: "Admin Portal",
         nameLabel: "Name (Optional)",
         namePlaceholder: "Enter your name",
         phoneLabel: "Phone Number (Optional)",
@@ -167,6 +170,9 @@ function updateLanguage() {
     document.getElementById('deptTitleText').textContent = t.deptTitle;
     titleText.textContent = t.title;
 
+    const adminBtnText = document.getElementById('adminBtnText');
+    if (adminBtnText) adminBtnText.textContent = t.adminBtn;
+
     nameLabel.textContent = t.nameLabel;
     userNameInput.placeholder = t.namePlaceholder;
 
@@ -176,7 +182,7 @@ function updateLanguage() {
     document.getElementById('addressLabel').textContent = t.addressLabel;
     document.getElementById('userAddress').placeholder = t.addressPlaceholder;
 
-    document.getElementById('purposeLabel').innerHTML = t.purposeLabel.replace('*', '<span style="color: red;">*</span>');
+    document.getElementById('purposeLabel').innerHTML = t.purposeLabel.replace('*', '<span style="color: #EF4444;">*</span>');
     document.getElementById('userPurposeOther').placeholder = t.purposePlaceholder;
 
     document.getElementById('purposeOptionDefault').textContent = t.purposeDefault;
@@ -206,10 +212,26 @@ function updateLanguage() {
     ratingHappyText.textContent = t.ratingHappy;
     ratingVeryHappyText.textContent = t.ratingVeryHappy;
 
-    submitBtn.textContent = t.submitBtn;
+    submitBtn.querySelector('span').textContent = t.submitBtn;
 
     thankYouText.textContent = t.thankYouText;
     newReviewBtn.textContent = t.newReviewBtn;
+
+    updateLastUpdateTime();
+}
+
+function updateLastUpdateTime() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+    
+    const el = document.getElementById('lastUpdate');
+    if (el) {
+        const label = currentLang === 'ta' ? 'கடைசியாக புதுப்பிக்கப்பட்டது' : (currentLang === 'en' ? 'Last Updated' : 'අවසන් යාවත්කාලීන කිරීම');
+        el.textContent = `${label}: ${year}-${month}-${day} ${timeStr}`;
+    }
 }
 
 // UI Event Listeners
